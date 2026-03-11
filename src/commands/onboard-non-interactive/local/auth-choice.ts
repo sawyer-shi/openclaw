@@ -8,12 +8,12 @@ import type { RuntimeEnv } from "../../../runtime.js";
 import { resolveDefaultSecretProviderAlias } from "../../../secrets/ref-contract.js";
 import { normalizeSecretInput } from "../../../utils/normalize-secret-input.js";
 import { normalizeSecretInputModeInput } from "../../auth-choice.apply-helpers.js";
+import { buildTokenProfileId, validateAnthropicSetupToken } from "../../auth-token.js";
 import {
   applyAzureOpenAIConfig,
   normalizeAzureOpenAIBaseUrl,
   normalizeAzureOpenAIModelId,
 } from "../../azure-openai-config.js";
-import { buildTokenProfileId, validateAnthropicSetupToken } from "../../auth-token.js";
 import {
   applyAuthProfileConfig,
   applyCloudflareAiGatewayConfig,
