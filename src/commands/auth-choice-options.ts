@@ -33,7 +33,7 @@ const AUTH_CHOICE_GROUP_DEFS: {
   },
   {
     value: "azure-openai",
-    label: "Azure OpenAI",
+    label: "Azure",
     hint: "Responses API + API key",
     choices: ["azure-openai-api-key"],
   },
