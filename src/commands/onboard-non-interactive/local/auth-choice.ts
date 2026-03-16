@@ -162,24 +162,6 @@ export async function applyNonInteractiveAuthChoice(params: {
     return null;
   }
 
-  const pluginProviderChoice = await applyNonInteractivePluginProviderChoice({
-    nextConfig,
-    authChoice,
-    opts,
-    runtime,
-    baseConfig,
-    resolveApiKey: (input) =>
-      resolveApiKey({
-        ...input,
-        cfg: baseConfig,
-        runtime,
-      }),
-    toApiKeyCredential,
-  });
-  if (pluginProviderChoice !== undefined) {
-    return pluginProviderChoice;
-  }
-
   const simpleApiKeyChoice = await applySimpleNonInteractiveApiKeyChoice({
     authChoice,
     nextConfig,
@@ -483,6 +465,24 @@ export async function applyNonInteractiveAuthChoice(params: {
       runtime.exit(1);
       return null;
     }
+  }
+
+  const pluginProviderChoice = await applyNonInteractivePluginProviderChoice({
+    nextConfig,
+    authChoice,
+    opts,
+    runtime,
+    baseConfig,
+    resolveApiKey: (input) =>
+      resolveApiKey({
+        ...input,
+        cfg: baseConfig,
+        runtime,
+      }),
+    toApiKeyCredential,
+  });
+  if (pluginProviderChoice !== undefined) {
+    return pluginProviderChoice;
   }
 
   if (
