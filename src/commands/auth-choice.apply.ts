@@ -6,6 +6,7 @@ import { applyAuthChoiceApiProviders } from "./auth-choice.apply.api-providers.j
 import { normalizeApiKeyTokenProviderAuthChoice } from "./auth-choice.apply.api-providers.js";
 import { applyAuthChoiceAzureOpenAI } from "./auth-choice.apply.azure-openai.js";
 import { normalizeApiKeyTokenProviderAuthChoice } from "./auth-choice.apply.api-providers.js";
+import { applyAuthChoiceAzureOpenAI } from "./auth-choice.apply.azure-openai.js";
 import { applyAuthChoiceMiniMax } from "./auth-choice.apply.minimax.js";
 import { applyAuthChoiceOAuth } from "./auth-choice.apply.oauth.js";
 import { applyAuthChoiceLoadedPluginProvider } from "./auth-choice.apply.plugin-provider.js";
