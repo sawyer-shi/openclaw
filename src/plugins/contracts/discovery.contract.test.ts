@@ -221,7 +221,22 @@ describe("provider discovery contract", () => {
             providers: {
               ollama: {
                 baseUrl: "http://ollama-host:11434/v1/",
-                models: [{ id: "llama3.2", name: "llama3.2" }],
+                models: [
+                  {
+                    id: "llama3.2",
+                    name: "llama3.2",
+                    reasoning: false,
+                    input: ["text"],
+                    cost: {
+                      input: 0,
+                      output: 0,
+                      cacheRead: 0,
+                      cacheWrite: 0,
+                    },
+                    contextWindow: 128_000,
+                    maxTokens: 8_192,
+                  },
+                ],
               },
             },
           },

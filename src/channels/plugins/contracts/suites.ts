@@ -1,6 +1,5 @@
 import { expect, it } from "vitest";
 import type { OpenClawConfig } from "../../../config/config.js";
-import type { ChannelMessageCapability } from "../message-capabilities.js";
 import type {
   ChannelAccountSnapshot,
   ChannelAccountState,

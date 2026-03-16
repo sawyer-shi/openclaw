@@ -37,7 +37,7 @@ function buildPrompter(): WizardPrompter {
     intro: async () => {},
     outro: async () => {},
     note: async () => {},
-    select: async () => "",
+    select: async <T>() => "" as T,
     multiselect: async () => [],
     text: async () => "",
     confirm: async () => false,
